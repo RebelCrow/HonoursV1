@@ -101,10 +101,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         if (sensorEvent.sensor.getType() == Sensor.TYPE_ACCELEROMETER)
         {
             //Change Txt Views here
-            Acceloutx.setText(String.valueOf(sensorEvent.values[0]));
-            AcceloutZ.setText(String.valueOf(sensorEvent.values[2]));
-            Accelouty.setText(String.valueOf(sensorEvent.values[1]));
-            String AccelOutput = (sensorEvent.values[0] + "," + sensorEvent.values[1] + "," + sensorEvent.values[2] + ",");
+            Acceloutx.setText(String.format("%.5f",sensorEvent.values[0]));
+            AcceloutZ.setText(String.format("%.5f",sensorEvent.values[2]));
+            Accelouty.setText(String.format("%.5f",sensorEvent.values[1]));
+            String AccelOutput = (String.format("%.5f",sensorEvent.values[0]) + "," + String.format("%.5f",sensorEvent.values[1]) + "," + String.format("%.5f",sensorEvent.values[2]) + ",");
             if (testflag = true)
             {
                 try{
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                     Accelfos.close();
 
                 }catch (FileNotFoundException e){
-                    e.printStackTrace();
+                    e.printStackTrace(); //these are necessary however under normal circumstances shouldn't be needed
                 }
                 catch (IOException e){
                     e.printStackTrace();
@@ -122,26 +122,28 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         }
         if (sensorEvent.sensor.getType()== Sensor.TYPE_GYROSCOPE){
             //change Txt Views here
-            Gyrooutx.setText(String.valueOf(sensorEvent.values[0]));
-            Gyrooutz.setText(String.valueOf(sensorEvent.values[2]));
-            Gyroouty.setText(String.valueOf(sensorEvent.values[1]));
-            String GyroOutput = (sensorEvent.values[0] + "," + sensorEvent.values[1] + "," + sensorEvent.values[2] + ",");
+            Gyrooutx.setText(String.format("%.5f",sensorEvent.values[0]));
+            Gyrooutz.setText(String.format("%.5f",sensorEvent.values[2]));
+            Gyroouty.setText(String.format("%.5f",sensorEvent.values[1]));
+            String GyroOutput = (String.format("%.5f",sensorEvent.values[0]) + "," + String.format("%.5f",sensorEvent.values[1]) + "," + String.format("%.5f",sensorEvent.values[2]) + ",");
+            if (testflag = true){
                 try{
                     Writer Accelfos = new BufferedWriter(new FileWriter(GyroFile, true));
                     Accelfos.write(GyroOutput);
                     Accelfos.close();
 
                 }catch (FileNotFoundException e){
-                    e.printStackTrace();
+                    e.printStackTrace(); //these are necessary however under normal circumstances shouldn't be needed
                 }
                 catch (IOException e) {
                     e.printStackTrace();
                 }
         }
+        }
         if (sensorEvent.sensor.getType() == Sensor.TYPE_STEP_DETECTOR)
         {
             StepCount++; //adds one to the step count
-            Stepout.setText(StepCount);
+            Stepout.setText(String.valueOf(StepCount));
         }
     }
 

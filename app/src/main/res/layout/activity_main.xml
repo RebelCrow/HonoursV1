@@ -10,17 +10,17 @@
         android:id="@+id/TxtViewAccelZ"
         android:layout_width="51dp"
         android:layout_height="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="9dp"
         android:text="Accel Z:"
-        app:layout_constraintStart_toEndOf="@+id/TxtViewGyroOutZ"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TxtViewAccelY" />
 
     <TextView
         android:id="@+id/TxtViewAccelOutX"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
+        android:layout_marginStart="9dp"
         android:layout_marginTop="46dp"
         android:text="X"
         app:layout_constraintStart_toEndOf="@+id/TxtViewAccelX"
@@ -30,8 +30,8 @@
         android:id="@+id/TxtViewAceelOutZ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="9dp"
         android:text="Z"
         app:layout_constraintStart_toEndOf="@+id/TxtViewAccelZ"
         app:layout_constraintTop_toBottomOf="@+id/TxtViewAccelOutY" />
@@ -40,27 +40,27 @@
         android:id="@+id/TxtViewAccelY"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="9dp"
         android:text="Accel Y:"
-        app:layout_constraintStart_toEndOf="@+id/TxtViewGyroOutY"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TxtViewAccelX" />
 
     <TextView
         android:id="@+id/TxtViewAccelX"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="46dp"
         android:text="Accel X:"
-        app:layout_constraintStart_toEndOf="@+id/TxtViewGyroOutX"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TxtViewAccelOutY"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="9dp"
         android:layout_marginTop="9dp"
         android:text="Y"
         app:layout_constraintStart_toEndOf="@+id/TxtViewAccelY"
@@ -80,7 +80,7 @@
         android:id="@+id/TxtViewGyroY"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="9dp"
         android:text="Gyro Y:"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +90,7 @@
         android:id="@+id/TxtViewGyroX"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="46dp"
         android:text="Gyro X:"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,8 +110,8 @@
         android:id="@+id/TxtViewGyroZ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="9dp"
         android:text="Gyro Z:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TxtViewGyroY" />
@@ -120,8 +120,8 @@
         android:id="@+id/TxtViewGyroOutZ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="9dp"
         android:text="Z"
         app:layout_constraintStart_toEndOf="@+id/TxtViewGyroZ"
         app:layout_constraintTop_toBottomOf="@+id/TxtViewGyroOutY" />
@@ -130,20 +130,20 @@
         android:id="@+id/TxtViewPedo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="30dp"
         android:text="Pedometer Count"
-        app:layout_constraintStart_toEndOf="@+id/TxtViewAccelOutX"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/TxtViewPedoOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="118dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="89dp"
         android:text="0"
-        app:layout_constraintStart_toEndOf="@+id/TxtViewAccelOutY"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TxtViewPedo" />
 
     <Button
@@ -151,9 +151,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="164dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="180dp"
         android:text="Calilbrate"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TxtViewAccelZ" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
